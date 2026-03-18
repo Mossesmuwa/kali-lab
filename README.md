@@ -10,6 +10,20 @@
 
 ---
 
+---
+
+## 📁 This Repository
+
+> **Repo:** `kali-linux-lab` — Kali Linux penetration testing against Metasploitable 2
+
+| File                                                          | Description                                                       |
+| ------------------------------------------------------------- | ----------------------------------------------------------------- |
+| 📄 **README.md** ← you are here                               | Main lab: Nmap scanning + vsftpd exploitation + shell access      |
+| 📄 [telnet-exploitation-lab.md](./telnet-exploitation-lab.md) | Deep-dive: Telnet attack + Wireshark plaintext credential capture |
+| 📁 [screenshots/](./screenshots/)                             | All evidence — terminal output and Wireshark captures             |
+
+---
+
 ## 🎯 Objective
 
 > **In plain English:** Set up a deliberately broken virtual machine as a target, then use Kali Linux to find its weaknesses and break into it — all safely inside an isolated lab.
@@ -211,13 +225,13 @@ This confirmed the domain controller was reachable and identified the key AD ser
 
 After getting in, I thought about what a defender could have done:
 
-| Finding                    | Fix                                                                       |
-| -------------------------- | ------------------------------------------------------------------------- |
-| vsftpd 2.3.4 backdoor      | Update to a patched version immediately — this is a known malicious build |
-| Telnet running (port 23)   | Disable telnet entirely, use SSH instead                                  |
-| MySQL exposed on port 3306 | Firewall it — databases should never be publicly reachable                |
-| VNC with weak auth         | Disable or require strong password + limit access by IP                   |
-| SSH version 4.7            | Update to current version                                                 |
+| Finding                    | Fix                                                                                                |
+| -------------------------- | -------------------------------------------------------------------------------------------------- |
+| vsftpd 2.3.4 backdoor      | Update to a patched version immediately — this is a known malicious build                          |
+| Telnet running (port 23)   | Disable telnet entirely, use SSH instead — [see full Telnet writeup](./telnet-exploitation-lab.md) |
+| MySQL exposed on port 3306 | Firewall it — databases should never be publicly reachable                                         |
+| VNC with weak auth         | Disable or require strong password + limit access by IP                                            |
+| SSH version 4.7            | Update to current version                                                                          |
 
 ---
 
@@ -247,7 +261,7 @@ After getting in, I thought about what a defender could have done:
 <div align="center">
 
 [![Back to Portfolio](https://img.shields.io/badge/←_Back_to_Portfolio-00ff88?style=for-the-badge)](https://mossesmuwa.github.io/My-portfolio/)
-[![All Labs](https://img.shields.io/badge/All_Labs-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Mossesmuwa)
-[![Next Lab →](https://img.shields.io/badge/Web_App_Lab_→-00e5ff?style=for-the-badge)](./web-app-lab.md)
+[![All Labs on GitHub](https://img.shields.io/badge/All_Labs-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Mossesmuwa)
+[![Telnet Lab →](https://img.shields.io/badge/Telnet_Exploitation_Lab_→-1679A7?style=for-the-badge)](./telnet-exploitation-lab.md)
 
 </div>
